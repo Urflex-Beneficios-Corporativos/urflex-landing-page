@@ -1,0 +1,41 @@
+{
+  "name": "urflex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@iconify/icons-ph": "^1.2.5",
+    "@phosphor-icons/react": "^2.1.5",
+    "@testing-library/react": "^16.0.0",
+    "bootstrap": "^5.3.3",
+    "phosphor-react": "^1.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1",
+    "react-scroll": "^1.9.0",
+    "sass": "^1.77.4",
+    "styled-components": "^6.1.11"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@iconify/react": "^5.0.1"
+  }
+}
