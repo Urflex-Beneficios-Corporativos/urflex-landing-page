@@ -11,6 +11,7 @@ const StyledSection = styled.section`
 
 const Container = styled.div`
    margin-top: 79px;
+   margin-bottom: 79px;
 `;
 
 const ServiceItem = styled.div`

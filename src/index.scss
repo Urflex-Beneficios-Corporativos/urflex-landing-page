@@ -7,4 +7,10 @@ body {
   #root {
     height: 2000px; /* Definindo a altura do #root como 2000 pixels */
   }
+
+  :root{
+    --default-color-green: #131F29;
+    --default-color-darkgreen: #101922;
+    --default-color-orange: #EB3E1B;
+  }
   

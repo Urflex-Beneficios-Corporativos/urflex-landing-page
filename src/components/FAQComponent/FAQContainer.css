@@ -1,0 +1,16 @@
+.faq-container{
+    color: #fff;
+    background-color: var(--default-color-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 100vh;
+    gap: 20px;
+    height: max-content;
+    padding-bottom: 25px;
+}
+.faq-container .title{
+    margin: 3%;
+    font-weight: 700;
+}

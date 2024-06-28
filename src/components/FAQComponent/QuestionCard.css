@@ -1,0 +1,40 @@
+.question-card{
+    width: 50%;
+    box-shadow: 0px 4px 4px #0000007f;
+    cursor: pointer;
+    height: max-content;
+    transition: filter 0.2s ease-in;
+}
+.question-card:hover{
+    filter: contrast(1.02);
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-color: var(--default-color-darkgreen);
+}
+.answer{
+    background-color: var(--default-color-darkgreen);
+    padding: 0 25px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease-in;
+}
+.answer p{
+    overflow: auto;
+}
+.plus{
+    color: var(--default-color-orange);
+    font-size: xx-large;
+    aspect-ratio: 1/1;
+    width: 25px;
+    text-align: center;
+}
+.show{
+    height: 200px;
+}
+.hidden{
+    height: 0px;
+}
