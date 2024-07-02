@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './QuestionCard.css';
+import './question-card.css';
 
 function QuestionCard({ question, answer }){
     const [isVisible, setIsVisible] = useState(false);
@@ -9,10 +9,10 @@ function QuestionCard({ question, answer }){
     }
 
     return (
-        <div className="question-card" onClick={toggleVisibility}>
-            <div className='question'>
+        <div className="question-card">
+            <div className='question' onClick={toggleVisibility}>
                 <h4>{ question }</h4>
-                <span className='plus'>{isVisible?'-':'+'}</span>
+                <div className={`plus ${isVisible?'turn':''}`}>+</div>
             </div>
             <div className={`answer ${isVisible?'show':'hidden'}`}>                
                 <p>{ answer }</p>

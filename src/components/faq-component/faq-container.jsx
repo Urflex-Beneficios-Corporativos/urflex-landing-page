@@ -1,6 +1,6 @@
 import React from 'react';
-import './FAQContainer.css'
-import QuestionCard from './QuestionCard'
+import './faq-container.css'
+import QuestionCard from './question-card'
 
 function FAQContainer() {
     return (

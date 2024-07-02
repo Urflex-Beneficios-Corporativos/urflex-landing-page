@@ -2,7 +2,8 @@ import React from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Proposta from "./components/Propostas"
-import FAQContainer from "./components/FAQComponent/FAQContainer"
+import FAQContainer from "./components/faq-component/faq-container"
+import Footer from "./components/footer-component/footer";
 
 const App = () => {
   return (
@@ -14,6 +15,8 @@ const App = () => {
       <Proposta />
 
       <FAQContainer/>
+
+      <Footer></Footer>
 
     </div>
   );

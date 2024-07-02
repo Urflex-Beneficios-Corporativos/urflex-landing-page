@@ -16,25 +16,37 @@
     background-color: var(--default-color-darkgreen);
 }
 .answer{
-    background-color: var(--default-color-darkgreen);
-    padding: 0 25px;
+    background-color: rgb(26, 39, 49);
+    padding: 0;
     overflow: hidden;
     height: 0;
     transition: height 0.5s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 .answer p{
-    overflow: auto;
+    overflow-y: auto;
+    padding: 15px;
 }
 .plus{
     color: var(--default-color-orange);
-    font-size: xx-large;
-    aspect-ratio: 1/1;
-    width: 25px;
-    text-align: center;
+    scale: 3;
+    transition: transform 0.2s ease-in;
+}
+.turn{
+    transform: rotate(45deg);
 }
 .show{
     height: 200px;
 }
 .hidden{
     height: 0px;
+}
+
+@media (max-width: 600px) {
+    .question-card{
+        width: 90%;
+        height: max-content;
+    }   
 }
