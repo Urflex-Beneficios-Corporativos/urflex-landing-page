@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { animateScroll as scroll } from 'react-scroll';
-import logo from '../components/Logo1.png';
+import logo from '../images/Logo1.png';
 
 const StyledHeader = styled.header`
   background-color: #131F29;

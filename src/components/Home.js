@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import cardImage from '../Frame 2.png';
+import cardImage from '../images/Frame 2.png';
 import { Element } from 'react-scroll';
 
 const HeroSection = styled.section`
