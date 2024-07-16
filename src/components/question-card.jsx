@@ -30,18 +30,23 @@ const AnswerStyled = styled.div`
   background-color: rgb(26, 39, 49);
   padding: 0;
   overflow: hidden;
-  height: 0;
-  transition: height 0.3s ease-in-out;
+  max-height: 0px;
+  transition: max-height 0.3s ease-in-out 0.1s;
   display: flex;
   justify-content: center;
   align-items: start;
 
   &.show {
-    height: 200px;
+    max-height: 1000px;
+  }
+  
+  & img{
+  width: 100%;
+  padding: 0 10%;
   }
 
   &.hidden {
-    height: 0px;
+    max-height: 0px;
   }
 `;
 
@@ -53,7 +58,7 @@ const AnswerTextStyled = styled.p`
 const PlusStyled = styled.div`
   color: var(--default-color-orange);
   transform: scale(3);
-  transition: transform 0.3s linear;
+  transition: transform 0.3s linear 0.1s;
 
   &.turn {
     transform: rotate(45deg) scale(3);
@@ -61,23 +66,23 @@ const PlusStyled = styled.div`
 `;
 
 function QuestionCard({ question, answer }) {
-    const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-    const toggleVisibility = () => {
-        setIsVisible(!isVisible);
-    };
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
 
-    return (
-        <QuestionCardStyled>
-            <QuestionStyled onClick={toggleVisibility}>
-                <h4>{question}</h4>
-                <PlusStyled className={isVisible ? 'turn' : ''}>+</PlusStyled>
-            </QuestionStyled>
-            <AnswerStyled className={isVisible ? 'show' : 'hidden'}>
-                <AnswerTextStyled>{answer}</AnswerTextStyled>
-            </AnswerStyled>
-        </QuestionCardStyled>
-    );
+  return (
+    <QuestionCardStyled>
+      <QuestionStyled onClick={toggleVisibility}>
+        <h4>{question}</h4>
+        <PlusStyled className={isVisible ? 'turn' : ''}>+</PlusStyled>
+      </QuestionStyled>
+      <AnswerStyled className={isVisible ? 'show' : 'hidden'}>
+        <AnswerTextStyled dangerouslySetInnerHTML={{ __html: answer }}></AnswerTextStyled>
+      </AnswerStyled>
+    </QuestionCardStyled>
+  );
 }
 
 export default QuestionCard;
