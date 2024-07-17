@@ -12,6 +12,7 @@ const StyledHeader = styled.header`
   width: 100%;
   z-index: 997;
   transition: all 0.5s;
+  border-bottom: 2px solid #FDFEFE; /* Line below header */
 `;
 
 const Container = styled.div`
@@ -93,17 +94,15 @@ const Header = () => {
     document.body.classList.toggle('mobile-nav-active', !isMobileNavActive);
   };
 
-
-
   const scrollToHome = () => {
-    scroll.scrollTo(1, {
-      duration: 1, // Ajuste a duração da rolagem para a seção "Home"
+    scroll.scrollTo(0, {
+      duration: 1,
     });
   };
-  
+
   const scrollToProposta = () => {
     scroll.scrollTo(620, {
-      duration: 1, // Ajuste a duração da rolagem para a seção "Home"
+      duration: 1,
     });
   };
 
@@ -129,5 +128,3 @@ const Header = () => {
 };
 
 export default Header;
-
-

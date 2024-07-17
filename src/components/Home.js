@@ -1,7 +1,30 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import cardImage from '../Frame 2.png';
 import { Element } from 'react-scroll';
+import linesImage from './linhas.png';
+
+const fadeInLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+const fadeInRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 const HeroSection = styled.section`
   --default-color: #ffffff;
@@ -11,6 +34,20 @@ const HeroSection = styled.section`
   min-height: 100vh;
   background-color: var(--background-color);
   display: flex;
+  position: relative;
+`;
+
+const BackgroundImage = styled.div`
+  position: absolute;
+  margin-top:50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(${linesImage});
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  
 `;
 
 const Container = styled.div`
@@ -22,6 +59,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
   @media (min-width: 992px) {
     flex-direction: row;
   }
@@ -29,13 +68,14 @@ const Container = styled.div`
 
 const TextContent = styled.div`
   flex: 1;
+  animation: ${fadeInLeft} 1s ease-out;
 `;
 
 const Title = styled.h2`
   color: white;
   font-weight: bold;
   font-size: 44px;
-  font-family: var(--default-font);
+  font-family: 'Roboto', sans-serif;
   margin-top: 150px;
   @media (max-width: 768px) {
     font-size: 32px;
@@ -46,18 +86,21 @@ const Title = styled.h2`
 const Description = styled.p`
   font-size: 20px;
   color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
   @media (max-width: 768px) {
     font-size: 18px;
   }
 `;
 
 const Image = styled.img`
-  width: 400px;
+  width: 350px;
   height: auto;
   border-radius: 10px;
   margin-top: 55px;
   margin-left: 99px;
   transition: transform 0.5s ease, filter 0.5s ease;
+  animation: ${fadeInRight} 1s ease-out;
   &:hover {
     transform: perspective(1000px) rotateY(-10deg) scale(1.3);
     filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.5));
@@ -68,6 +111,7 @@ const Home = () => {
   return (
     <Element name="home">
       <HeroSection>
+        <BackgroundImage />
         <Container>
           <TextContent>
             <Title>Chegar ao seu trabalho nunca foi tão fácil</Title>
@@ -81,6 +125,4 @@ const Home = () => {
 };
 
 export default Home;
-
-
 
