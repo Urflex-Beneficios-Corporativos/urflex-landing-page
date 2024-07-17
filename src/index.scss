@@ -5,7 +5,7 @@ body {
   }
   
   #root {
-    height: 2000px; /* Definindo a altura do #root como 2000 pixels */
+    height: max-content;
   }
 
   :root{
