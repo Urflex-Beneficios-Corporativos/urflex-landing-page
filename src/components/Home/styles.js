@@ -1,10 +1,7 @@
-import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import cardImage from '../Frame 2.png';
-import { Element } from 'react-scroll';
-import linesImage from './linhas.png';
+import linesImage from '../../assets/lines.png';
 
-const fadeInLeft = keyframes`
+export const fadeInLeft = keyframes`
   from {
     opacity: 0;
     transform: translateX(-100%);
@@ -15,7 +12,7 @@ const fadeInLeft = keyframes`
   }
 `;
 
-const fadeInRight = keyframes`
+export const fadeInRight = keyframes`
   from {
     opacity: 0;
     transform: translateX(100%);
@@ -26,7 +23,7 @@ const fadeInRight = keyframes`
   }
 `;
 
-const HeroSection = styled.section`
+export const HeroSection = styled.section`
   --default-color: #ffffff;
   --background-color: #131F29;
   --heading-color: #ffffff;
@@ -37,7 +34,7 @@ const HeroSection = styled.section`
   position: relative;
 `;
 
-const BackgroundImage = styled.div`
+export const BackgroundImage = styled.div`
   position: absolute;
   margin-top:50px;
   left: 0;
@@ -50,7 +47,7 @@ const BackgroundImage = styled.div`
   
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -66,12 +63,12 @@ const Container = styled.div`
   }
 `;
 
-const TextContent = styled.div`
+export const TextContent = styled.div`
   flex: 1;
   animation: ${fadeInLeft} 1s ease-out;
 `;
 
-const Title = styled.h2`
+export const Title = styled.h2`
   color: white;
   font-weight: bold;
   font-size: 44px;
@@ -83,7 +80,7 @@ const Title = styled.h2`
   }
 `;
 
-const Description = styled.p`
+export const Description = styled.p`
   font-size: 20px;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
@@ -93,7 +90,7 @@ const Description = styled.p`
   }
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
   width: 350px;
   height: auto;
   border-radius: 10px;
@@ -106,23 +103,3 @@ const Image = styled.img`
     filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.5));
   }
 `;
-
-const Home = () => {
-  return (
-    <Element name="home">
-      <HeroSection>
-        <BackgroundImage />
-        <Container>
-          <TextContent>
-            <Title>Chegar ao seu trabalho nunca foi tão fácil</Title>
-            <Description>Ofereça mais conforto e praticidade no trajeto diário com nosso cartão de benefícios exclusivo para mobilidade urbana.</Description>
-          </TextContent>
-          <Image src={cardImage} alt="Imagem do cartão" />
-        </Container>
-      </HeroSection>
-    </Element>
-  );
-};
-
-export default Home;
-
