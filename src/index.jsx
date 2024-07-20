@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.scss';
+import './index.css';
 import App from './App';
-import * as serviceWorker from '../src/serviceWorker';
+import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const container = document.getElementById('root');
