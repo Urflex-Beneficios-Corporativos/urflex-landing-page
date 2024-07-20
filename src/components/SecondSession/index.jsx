@@ -1,5 +1,6 @@
 import React from 'react';
 import cardImage from '../../assets/card.png';
+import { Container, ContentContainer, Image, TextContainer, Title, Description } from './styles';
 
 const SecondSession = () => {
   return (

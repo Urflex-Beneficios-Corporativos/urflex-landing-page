@@ -1,0 +1,53 @@
+:root {
+      --primary-blue: #131F29;
+      --primary-orange: #EB3E1B;
+      --primary-white: #FDFEFE;
+
+      --dark-blue: #101922;
+      --light-blue: #1A2731;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif;
+      box-sizing: border-box;
+    }
+
+    button { cursor: pointer; }
+  
+    [disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    
+    .react-modal-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left:0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

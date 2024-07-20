@@ -8,6 +8,7 @@ export const StyledSection = styled.section`
 
 export const Container = styled.div`
    margin-top: 79px;
+   margin-bottom: 100px;
 `;
 
 export const ServiceItem = styled.div`
@@ -57,7 +58,6 @@ export const Title = styled.h3`
 `;
 
 export const TitleContainer = styled.div`
-  margin-top: 116px;
   display: flex;
   flex-direction: column;
   align-items: center;

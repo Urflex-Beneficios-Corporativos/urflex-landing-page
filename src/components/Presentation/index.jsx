@@ -3,7 +3,7 @@ import cardImage from '../../assets/cards.png';
 import { Element } from 'react-scroll';
 import { HeroSection, BackgroundImage, Container, TextContent, Title, Description, Image } from './styles';
 
-const Home = () => {
+const Presentation = () => {
   return (
     <Element name="home">
       <HeroSection>
@@ -20,5 +20,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Presentation;
 

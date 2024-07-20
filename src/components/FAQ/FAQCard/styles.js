@@ -55,7 +55,7 @@ export const AnswerTextStyled = styled.p`
 `;
 
 export const PlusStyled = styled.div`
-  color: var(--default-color-orange);
+  color: #EB3E1B;
   transform: scale(3);
   transition: transform 0.3s linear 0.1s;
 

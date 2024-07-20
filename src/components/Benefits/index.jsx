@@ -7,8 +7,13 @@ const Proposta = () => {
         <StyledSection id="services" className="services section">
             <Container className="container title" data-aos="fade-up">
                 <TitleContainer>
-                    <h2>Por que o caminho até o trabalho faz toda a diferença?</h2>
-                    <p>Conheça as vantagens do nosso produto e ofereça um deslocamento sem complicações para o seu time.</p>
+                    <h2 style={{
+                        fontSize: '44px',
+                        fontWeight: 'bold',
+                    }}>Por que o caminho até o trabalho faz toda a diferença?</h2>
+                    <p style={{
+                        fontSize: '22px',
+                    }}>Conheça as vantagens do nosso produto e ofereça um deslocamento sem complicações para o seu time.</p>
                 </TitleContainer>
             </Container>
             <Container className="container">

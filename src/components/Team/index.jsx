@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import PersonCard from './Team card';
-import DaniloImg from '../assets/1.jpeg'
-import GustavoImg from '../assets/2.jpeg'
-import RayImg from '../assets/3.jpeg'
-import HenriqueImg from '../assets/4.jpeg'
-import FernandaImg from '../assets/5.jpeg'
-import YasminImg from '../assets/8.jpeg'
-import BeatrizImg from '../assets/6.jpeg'
-import CristianoImg from '../assets/7.jpeg'
-import MarinaImg from '../assets/9.jpeg'
+import DaniloImg from '../../assets/1.jpeg'
+import GustavoImg from '../../assets/2.jpeg'
+import RayImg from '../../assets/3.jpeg'
+import HenriqueImg from '../../assets/4.jpeg'
+import FernandaImg from '../../assets/5.jpeg'
+import YasminImg from '../../assets/8.jpeg'
+import BeatrizImg from '../../assets/6.jpeg'
+import CristianoImg from '../../assets/7.jpeg'
+import MarinaImg from '../../assets/9.jpeg'
+import PersonCard from '../Team/PersonCard';
 import { TeamStyled, ButtonGroup, ButtonStyled, PersonContainer } from './styles';
 
 function Team() {

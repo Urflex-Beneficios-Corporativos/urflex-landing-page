@@ -1,6 +1,6 @@
 import React from 'react';
-import QuestionCard from './FAQ card';
-import Plans from '../assets/plans.png'
+import QuestionCard from './FAQCard';
+import Plans from '../../assets/plans.png';
 import { FAQContainerStyled, TitleStyled } from './styles';
 
 function FAQContainer() {

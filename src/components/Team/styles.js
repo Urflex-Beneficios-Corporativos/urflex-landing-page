@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TeamStyled = styled.section`
-    background-color: var(--default-color-green);
+    background-color: var(--primary-blue);
     display: flex;
     width: 100%;
     height: 100vh;
@@ -21,7 +21,7 @@ export const ButtonGroup = styled.div`
 export const ButtonStyled = styled.button`
   padding: 15px;
   font-size: 1.5em;
-  border: 1px solid var(--default-color-orange);
+  border: 1px solid var(--primary-orange);
   border-radius: 10px;
   color: #fff;
   transition: filter 0.3s linear;
@@ -29,9 +29,13 @@ export const ButtonStyled = styled.button`
   font-Weight: 500;
   background-color: transparent;
 
+  &:hover{
+    background: var(--primary-orange);
+  }
+
   &.selected{
         border-color: transparent;
-        background-color: var(--default-color-orange);
+        background-color: var(--primary-orange);
   }  
 `;
 

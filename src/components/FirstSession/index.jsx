@@ -1,6 +1,7 @@
 import React from 'react';
 import comfortImage from '../../assets/comfort.png';
 import linesImage from '../../assets/double_lines.png';
+import { Container, ContentContainer, Image, LinesImage, TextContainer, Title, Description } from './styles';
 
 const FirstSession = () => {
   return (

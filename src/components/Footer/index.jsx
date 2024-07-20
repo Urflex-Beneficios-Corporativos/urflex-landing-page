@@ -1,8 +1,6 @@
 import React from 'react';
-import urflexLogo from '../assets/urflex_logo.png';
-import emailImg from '../assets/email.png';
-import instagramImg from '../assets/instagram.png';
-import linkedinImg from '../assets/linkedin.png';
+import urflexLogo from '../../assets/logo.png';
+import { InstagramLogo, LinkedinLogo, Envelope } from "@phosphor-icons/react"
 import { FooterStyled, ParagraphStyled, EmailContainerStyled, InputStyled, ButtonStyled, SocialStyled, CopyrightStyled } from './styles';
 
 function Footer() {
@@ -25,13 +23,13 @@ function Footer() {
       </EmailContainerStyled>
       <SocialStyled>
         <a href="mailto:urflex.app@gmail.com">
-          <img src={emailImg} alt="email" />
+        < Envelope size={48} color='white' alt="E-mail"/>
         </a>
         <a href="https://www.instagram.com/urflexbeneficios">
-          <img src={instagramImg} alt="instagram" />
+          <InstagramLogo size={48} color='white' alt="Instagram"/>
         </a>
         <a href="https://www.linkedin.com/company/urflex-beneficios-corporativos">
-          <img src={linkedinImg} alt="linkedin" />
+          <LinkedinLogo size={48} color='white' alt="LinkedIn"/>
         </a>
       </SocialStyled>
       <CopyrightStyled>

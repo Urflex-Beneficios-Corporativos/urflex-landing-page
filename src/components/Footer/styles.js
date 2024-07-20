@@ -5,7 +5,7 @@ export const FooterStyled = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--default-color-grey);
+  background-color: #222120;
   width: 100%;
   height: max-content;
   padding: 25px 0;
@@ -49,7 +49,7 @@ export const ButtonStyled = styled.button`
   padding: 8px 20px;
   border: none;
   border-radius: 5px;
-  background-color: var(--default-color-orange);
+  background-color: #EB3E1B;
   color: #fff;
   transition: filter 0.3s linear;
 

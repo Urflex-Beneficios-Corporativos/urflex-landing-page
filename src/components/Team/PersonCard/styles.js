@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Person = styled.section`
-    background-color: var(--default-color-darkgreen);
+    background-color: var(--dark-blue);
     width: 25%;
     border-radius: 10px;
     display: flex;
@@ -16,7 +16,7 @@ export const Image = styled.img`
     width: 80%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    border: 2px solid var(--default-color-orange);
+    border: 2px solid var(--primary-orange);
 `;
 
 export const Title = styled.h3`

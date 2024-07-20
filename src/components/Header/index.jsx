@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 import { StyledHeader, Container, Logo, LogoImage, NavMenu, NavLink, MobileNavToggle, GetStartedButton } from './styles';
 
 const Header = () => {
@@ -11,18 +12,6 @@ const Header = () => {
     document.body.classList.toggle('mobile-nav-active', !isMobileNavActive);
   };
 
-  const scrollToHome = () => {
-    scroll.scrollTo(0, {
-      duration: 1,
-    });
-  };
-
-  const scrollToProposta = () => {
-    scroll.scrollTo(620, {
-      duration: 1,
-    });
-  };
-
   return (
     <StyledHeader>
       <Container>
@@ -31,9 +20,25 @@ const Header = () => {
         </Logo>
         <NavMenu className={isMobileNavActive ? 'mobile-nav-active' : ''}>
           <ul>
-            <li><NavLink onClick={scrollToHome}>Home</NavLink></li>
-            <li><NavLink to="services" smooth={true} duration={500}>Sobre Nós</NavLink></li>
-            <li><NavLink to="team" smooth={true} duration={500}>Nosso Time</NavLink></li>
+            <Link to="/" style={{textDecoration: 'none'}}>
+              <li>
+                <NavLink>
+                  Home
+                </NavLink>
+              </li>
+            </Link>
+            <li>
+              <NavLink>
+                Sobre Nós
+              </NavLink>
+            </li>
+            <Link to="/team" style={{textDecoration: 'none'}}>
+              <li>
+                <NavLink>
+                  Nosso Time
+                </NavLink>
+              </li>
+            </Link>
           </ul>
         </NavMenu>
         <MobileNavToggle onClick={toggleMobileNav} />
