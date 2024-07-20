@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const QuestionCardStyled = styled.div`
+export const QuestionCardStyled = styled.div`
   width: 50%;
   box-shadow: 0px 4px 4px #0000007f;
   cursor: pointer;
@@ -18,7 +17,7 @@ const QuestionCardStyled = styled.div`
   }
 `;
 
-const QuestionStyled = styled.div`
+export const QuestionStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,7 +25,7 @@ const QuestionStyled = styled.div`
   background-color: var(--default-color-darkgreen);
 `;
 
-const AnswerStyled = styled.div`
+export const AnswerStyled = styled.div`
   background-color: rgb(26, 39, 49);
   padding: 0;
   overflow: hidden;
@@ -50,12 +49,12 @@ const AnswerStyled = styled.div`
   }
 `;
 
-const AnswerTextStyled = styled.p`
+export const AnswerTextStyled = styled.p`
   overflow-y: auto;
   padding: 15px;
 `;
 
-const PlusStyled = styled.div`
+export const PlusStyled = styled.div`
   color: var(--default-color-orange);
   transform: scale(3);
   transition: transform 0.3s linear 0.1s;
@@ -64,25 +63,3 @@ const PlusStyled = styled.div`
     transform: rotate(45deg) scale(3);
   }
 `;
-
-function QuestionCard({ question, answer }) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-  };
-
-  return (
-    <QuestionCardStyled>
-      <QuestionStyled onClick={toggleVisibility}>
-        <h4>{question}</h4>
-        <PlusStyled className={isVisible ? 'turn' : ''}>+</PlusStyled>
-      </QuestionStyled>
-      <AnswerStyled className={isVisible ? 'show' : 'hidden'}>
-        <AnswerTextStyled dangerouslySetInnerHTML={{ __html: answer }}></AnswerTextStyled>
-      </AnswerStyled>
-    </QuestionCardStyled>
-  );
-}
-
-export default QuestionCard;

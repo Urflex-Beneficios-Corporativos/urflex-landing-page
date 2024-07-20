@@ -1,25 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import QuestionCard from './question-card';
+import QuestionCard from './FAQ card';
 import Plans from '../assets/plans.png'
-
-const FAQContainerStyled = styled.div`
-    color: #fff;
-    background-color: var(--default-color-green);
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 20px;
-    height: max-content;
-    padding-bottom: 10%;
-`;
-
-const TitleStyled = styled.h2`
-    margin: 3%;
-    font-weight: 700;
-`;
-
+import { FAQContainerStyled, TitleStyled } from './styles';
 
 function FAQContainer() {
     return (

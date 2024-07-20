@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import styled from "styled-components";
-import PersonCard from './team-person-card';
+import PersonCard from './Team card';
 import DaniloImg from '../assets/1.jpeg'
 import GustavoImg from '../assets/2.jpeg'
 import RayImg from '../assets/3.jpeg'
@@ -10,53 +9,7 @@ import YasminImg from '../assets/8.jpeg'
 import BeatrizImg from '../assets/6.jpeg'
 import CristianoImg from '../assets/7.jpeg'
 import MarinaImg from '../assets/9.jpeg'
-
-const TeamStyled = styled.section`
-    background-color: var(--default-color-green);
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    flex: 1;
-    flex-direction: column;
-    padding: 150px 10% 100px 10%;
-
-`;
-
-const ButtonGroup = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
- 
-`;
-
-const ButtonStyled = styled.button`
-  padding: 15px;
-  font-size: 1.5em;
-  border: 1px solid var(--default-color-orange);
-  border-radius: 10px;
-  color: #fff;
-  transition: filter 0.3s linear;
-  width: 25%;
-  font-Weight: 500;
-  background-color: transparent;
-
-  &.selected{
-        border-color: transparent;
-        background-color: var(--default-color-orange);
-  }  
-`;
-
-const PersonContainer = styled.div`
-    display: none;
-    height: 100%;
-    justify-content: center;
-    gap: 20px;
-    padding: 25px 0;
-
-    &.selected{
-    display: flex;
-  }  
-`;
+import { TeamStyled, ButtonGroup, ButtonStyled, PersonContainer } from './styles';
 
 function Team() {
     const [selected, setSelected] = useState('leadership');
@@ -71,7 +24,6 @@ function Team() {
             <ButtonStyled className={selected === 'tech' ? 'selected' : ''} onClick={() => toggleTo('tech')}>Tech</ButtonStyled>
         </ButtonGroup>
 
-        {/*Container leadership*/}
         <PersonContainer className={selected === 'leadership' ? 'selected' : ''}>
             <PersonCard
                 imageUrl={DaniloImg}
@@ -103,7 +55,6 @@ function Team() {
             </PersonCard>
         </PersonContainer>
 
-        {/*container growth*/}
         <PersonContainer className={selected === 'growth' ? 'selected' : ''}>
 
             <PersonCard
@@ -122,7 +73,6 @@ function Team() {
             </PersonCard>
         </PersonContainer>
 
-        {/*container tech*/}
         <PersonContainer className={selected === 'tech' ? 'selected' : ''}>
             <PersonCard
                 imageUrl={BeatrizImg}
