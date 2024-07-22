@@ -7,10 +7,14 @@ const SecondSession = () => {
     <Container>
       <ContentContainer>
         <TextContainer>
-          <Title>Deslocamento sem complicações para você e seu time.</Title>
-          <Description>Com o nosso cartão de benefícios, será possível ir até seu local de trabalho tranquilamente, evitando os estresses diários tão comuns em meios urbanos.</Description>
+          <Title>
+            Deslocamento <span className="highlight">sem complicações</span> para você e seu time.
+          </Title>
+          <Description>
+            Com o nosso cartão de benefícios, será possível ir até seu local de trabalho tranquilamente, evitando os estresses diários tão comuns em meios urbanos.
+          </Description>
         </TextContainer>
-        <Image src={cardImage} alt="Imagem do cartão" />
+        <Image src={cardImage} alt="Imagem do cartão" className="card-image" />
       </ContentContainer>
     </Container>
   );
