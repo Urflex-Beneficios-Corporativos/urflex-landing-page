@@ -3,13 +3,22 @@ import styled from "styled-components";
 export const Person = styled.section`
     background-color: var(--dark-blue);
     width: 25%;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
     padding: 30px;
     color: #fff;
+
+    @media(max-width: 600px){
+          width: 100vw;
+          scale: 0.8;
+    }
+
+    &.person-card{
+
+    } 
 `;
 
 export const Image = styled.img`

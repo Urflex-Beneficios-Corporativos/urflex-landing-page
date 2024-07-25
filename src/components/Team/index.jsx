@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import DaniloImg from '../../assets/1.jpeg'
 import GustavoImg from '../../assets/2.jpeg'
 import RayImg from '../../assets/3.jpeg'
@@ -9,22 +9,67 @@ import BeatrizImg from '../../assets/6.jpeg'
 import CristianoImg from '../../assets/7.jpeg'
 import MarinaImg from '../../assets/9.jpeg'
 import PersonCard from '../Team/PersonCard';
-import { TeamStyled, ButtonGroup, ButtonStyled, PersonContainer } from './styles';
+import { TeamStyled, ButtonGroup, ButtonStyled, PersonContainer, PrevButton, NextButton, Indicators, Dot } from './styles';
+
 
 function Team() {
-    const [selected, setSelected] = useState('leadership');
+    const [selectedCategory, setSelectedCategory] = useState('leadership');
+    const [dots, setDots] = useState([]);
+    const [currentPersonIndex, setCurrentPersonIndex] = useState(0);
+    const [totalPersons, setTotalPersons] = useState(0);
+    const teamContainer = useRef(null);
 
-    const toggleTo = (value) => {
-        setSelected(value);
+    const categoryChange = (category) => {
+        setCurrentPersonIndex(0);
+        setSelectedCategory(category);
     };
-    return <TeamStyled>
+
+    const personChange = (index) => {
+        if (index < 0 || index >= totalPersons) {
+            return;
+        }
+        setCurrentPersonIndex(index);
+    };
+
+    const calculateTranslateX = () => {
+        return -currentPersonIndex * 100;
+    };
+    useEffect(() => {
+        let selectedCategoryContainer = teamContainer.current.querySelectorAll('.selected')[1];
+
+        const numberOfPersons = selectedCategoryContainer.querySelectorAll('.person-card').length;
+        setTotalPersons(numberOfPersons);
+
+        setDots(Array(numberOfPersons).fill(null));
+    }, [selectedCategory]);
+
+
+
+
+    return <TeamStyled ref={teamContainer}>
         <ButtonGroup>
-            <ButtonStyled className={selected === 'leadership' ? 'selected' : ''} onClick={() => toggleTo('leadership')}>Liderança</ButtonStyled>
-            <ButtonStyled className={selected === 'growth' ? 'selected' : ''} onClick={() => toggleTo('growth')}>Growth</ButtonStyled>
-            <ButtonStyled className={selected === 'tech' ? 'selected' : ''} onClick={() => toggleTo('tech')}>Tech</ButtonStyled>
+            <ButtonStyled 
+                className={selectedCategory === 'leadership' ? 'selected' : ''} 
+                onClick={() => categoryChange('leadership')}>Liderança</ButtonStyled>
+            <ButtonStyled 
+                className={selectedCategory === 'growth' ? 'selected' : ''} 
+                onClick={() => categoryChange('growth')}>Growth</ButtonStyled>
+            <ButtonStyled 
+                className={selectedCategory === 'tech' ? 'selected' : ''} 
+                onClick={() => categoryChange('tech')}>Tech</ButtonStyled>
         </ButtonGroup>
 
-        <PersonContainer className={selected === 'leadership' ? 'selected' : ''}>
+        <PrevButton 
+            className={currentPersonIndex === 0 ? 'hidden' : ''} 
+            onClick={() => personChange(currentPersonIndex - 1)} ></PrevButton>
+        <NextButton 
+            className={currentPersonIndex >= totalPersons - 1 ? 'hidden' : ''} 
+            onClick={() => personChange(currentPersonIndex + 1)} ></NextButton>
+
+        <PersonContainer
+            translateX={calculateTranslateX()}
+            className={selectedCategory === 'leadership' ? 'selected' : ''}>
+
             <PersonCard
                 imageUrl={DaniloImg}
                 name={'Danilo Veloso'}
@@ -53,9 +98,12 @@ function Team() {
                 description={'<strong>Professor Associado I</strong> e <strong>Coordenador</strong> do Curso de Graduação em <strong>Sistemas e Mídias Digitais</strong> na UFC, ministra disciplinas de informática na educação, gestão de projetos, gestão de negócios e empreendedorismo. Na Urflex, atua como <strong>Professor Orientador</strong> e <strong>Consultor</strong>.'}
             >
             </PersonCard>
+
         </PersonContainer>
 
-        <PersonContainer className={selected === 'growth' ? 'selected' : ''}>
+        <PersonContainer
+            translateX={calculateTranslateX()}
+            className={selectedCategory === 'growth' ? 'selected' : ''}>
 
             <PersonCard
                 imageUrl={FernandaImg}
@@ -73,7 +121,9 @@ function Team() {
             </PersonCard>
         </PersonContainer>
 
-        <PersonContainer className={selected === 'tech' ? 'selected' : ''}>
+        <PersonContainer
+            translateX={calculateTranslateX()}
+            className={selectedCategory === 'tech' ? 'selected' : ''}>
             <PersonCard
                 imageUrl={BeatrizImg}
                 name={'Beatriz Fernandes'}
@@ -105,6 +155,17 @@ function Team() {
             >
             </PersonCard>
         </PersonContainer>
+
+        <Indicators>
+            {dots.map((_, index) => (
+                <Dot
+                    key={index}
+                    onClick={
+                        () => personChange(index)
+                    }
+                    className={currentPersonIndex === index ? 'show' : ''} />
+            ))}
+        </Indicators>
     </TeamStyled>
 }
 export default Team;
