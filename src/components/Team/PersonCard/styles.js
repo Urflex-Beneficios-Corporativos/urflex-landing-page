@@ -15,6 +15,10 @@ export const Person = styled.section`
           width: 100vw;
           scale: 0.8;
     }
+    @media(max-width: 1024px){
+        width: 100vw;
+        scale: 0.8;
+    }
 
     &.person-card{
 
@@ -26,6 +30,10 @@ export const Image = styled.img`
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 2px solid var(--primary-orange);
+
+    @media(min-width: 600px) and (max-width: 1024px){
+        width: 50%;
+    }
 `;
 
 export const Title = styled.h3`
