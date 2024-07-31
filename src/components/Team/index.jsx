@@ -92,7 +92,6 @@ function Team() {
                 ))}
             </PersonContainer>
         ))}
-
         <Indicators>
             {dots.map((_, index) => (
                 <Dot
