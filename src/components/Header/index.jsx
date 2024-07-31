@@ -22,21 +22,17 @@ const Header = () => {
           <ul>
             <Link to="/" style={{textDecoration: 'none'}}>
               <li>
-                <NavLink>
-                  Home
-                </NavLink>
+                <NavLink>Home</NavLink>
               </li>
             </Link>
-            <li>
-              <NavLink>
-                Sobre Nós
-              </NavLink>
-            </li>
-            <Link to="/team" style={{textDecoration: 'none'}}>
+            <Link to="/about" style={{ textDecoration: 'none' }}> 
               <li>
-                <NavLink>
-                  Nosso Time
-                </NavLink>
+                <NavLink>Sobre Nós</NavLink>
+              </li>
+            </Link>
+            <Link to="/team" style={{ textDecoration: 'none' }}>
+              <li>
+                <NavLink>Nosso Time</NavLink>
               </li>
             </Link>
           </ul>

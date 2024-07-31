@@ -66,7 +66,7 @@ function Team() {
             </PersonCard>
             <PersonCard
                 imageUrl={YasminImg}
-                name={'Yasmin Lima'}
+                name={'Yasmin Emily'}
                 role={'Analista de Marketing'}
                 description={'Graduanda em <strong>Engenharia de Computação</strong> na UFC e apaixonada por tecnologia. Na Urflex, atua como <strong>desenvolvedora fullstack</strong> e <strong>Analista de Marketing</strong>. É responsável por ajudar nas demandas de <strong>Growth</strong>.'}
             >
@@ -97,7 +97,7 @@ function Team() {
             </PersonCard>
             <PersonCard
                 imageUrl={YasminImg}
-                name={'Yasmin Lima'}
+                name={'Yasmin Emily'}
                 role={'Desenvolvedora de software'}
                 description={
                     'Graduanda em <strong>Engenharia de Computação</strong> na UFC e apaixonada por tecnologia. Na Urflex, atua como <strong>desenvolvedora fullstack</strong> e <strong>Analista de Marketing</strong>. É responsável por auxiliar no desenvolvimento do sistema.'
