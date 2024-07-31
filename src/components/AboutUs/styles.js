@@ -7,11 +7,17 @@ export const Container = styled.div`
   padding: 120px 20px 40px; 
   background-color: #131F29;
   color: #ffffff;
+  height: 100vh;
+
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 export const TextContainer = styled.div`
   max-width: 800px;
   text-align: justify;
+  height: 100%;
 
   @media (max-width: 768px) {
     text-align: left;
@@ -22,7 +28,8 @@ export const TextContainer = styled.div`
 export const Title = styled.h2`
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 40px;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -31,12 +38,10 @@ export const Title = styled.h2`
 `;
 
 export const Description = styled.p`
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  font-weight: 300;
   line-height: 1.6;
-
-  b {
-    font-weight: bold;
-  }
 
   @media (max-width: 768px) {
     font-size: 16px;
