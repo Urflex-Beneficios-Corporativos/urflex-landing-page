@@ -4,17 +4,16 @@ export const TeamStyled = styled.section`
     background-color: var(--primary-blue);
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100dvh;
     flex: 1;
     flex-direction: column;
     padding: 150px 10% 100px 10%;
 
-    @media(max-width: 600px){
+    @media(max-width: 1024px){
       position: relative;
       padding: 150px 0 50px 0;
       height: max-content;
       overflow-x: hidden;
-      min-height: 100dvh;
     }
 
 `;
@@ -52,7 +51,7 @@ export const ButtonStyled = styled.button`
         border-radius: 5px;
         width: 30%;
         font-Weight: 500;
-    }  
+    } 
 `;
 
 export const PersonContainer = styled.div`
@@ -65,8 +64,7 @@ export const PersonContainer = styled.div`
 
     &.selected{
       display: flex;
-    }
-    
+    }    
     
     @media(max-width: 600px){
       width: max-content;
@@ -75,71 +73,130 @@ export const PersonContainer = styled.div`
       padding: 0;
 
       transform: ${({ translateX }) => `translateX(${translateX}vw)`};
+    }
+    @media(max-width: 1024px){
+      width: max-content;
+      justify-content: start;
+      gap: 0;
+      padding: 0;
 
+      transform: ${({ translateX }) => `translateX(${translateX}vw)`};
     }
 `;
 
+
 export const NextButton = styled.button`
-  width: 20px;
-  height: 40px;
   position: absolute;
   top: 50%;
-  right: 5%;
+  right: 0;
   z-index: 50;
   background-color: transparent;
-  border: none;
-  cursor: pointer;
   display: none;
+  border: none;
+
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &::before {
     content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid #fff;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    transform: translateX(-60%) rotate(45deg);
+    cursor: pointer;
   }
   &.hidden{
     display: none;
   }
   &:active {
     opacity: 0.5;
+    animation: moveR 0.1s linear 0s backwards;
   }
+  
+  @keyframes moveR {
+      from{transform: translateX(0);}
+      to{transform: translateX(10px);}
+  }
+
   @media(max-width: 600px){
     display: inline-block;
+
+    &::before {
+      display: block;
+    }
+  }
+  @media(max-width: 1024px){
+    display: inline-block;
+
+    &::before {
+      display: block;
+    }
   }
 `;
 export const PrevButton = styled.button`
-  width: 20px;
-  height: 40px;
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: 0;
   z-index: 50;
   background-color: transparent;
-  border: none;
-  cursor: pointer;
   display: none;
+  border: none;
 
-  &::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid #fff;
-  }
-  &:active {
-    opacity: 0.5;
-  }
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &.hidden{
     display: none;
   }
 
+  &::before {
+    content: '';
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    transform: translateX(60%) rotate(45deg);
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.5;
+    animation: moveL 0.1s linear 0s backwards;
+  }
+
   @media(max-width: 600px){
     display: inline-block;
+
+    &::before {
+      display: block;
+    }
+  }
+  @media(max-width: 1024px){
+    display: inline-block;
+
+    &::before {
+      display: block;
+    }
+  }
+  
+  @keyframes moveL {
+      from{transform: translateX(0);}
+      to{transform: translateX(-10px);}
   }
 `;
 
@@ -151,6 +208,9 @@ export const Indicators = styled.div`
   display: none;
 
   @media(max-width: 600px){
+    display: flex;
+  }
+  @media(min-width: 600px) and (max-width: 1024px){
     display: flex;
   }
 `;
