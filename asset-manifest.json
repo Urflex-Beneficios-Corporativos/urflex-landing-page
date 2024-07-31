@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/urflex-landing-page/static/css/main.4396f6e1.css",
+    "main.js": "/urflex-landing-page/static/js/main.f7a6062f.js",
+    "static/media/comfort.png": "/urflex-landing-page/static/media/comfort.312b8b9c4d890fc72477.png",
+    "static/media/card.png": "/urflex-landing-page/static/media/card.0e90963d7794a92b9e00.png",
+    "static/media/3.jpeg": "/urflex-landing-page/static/media/3.392c6f82dbd4a8069787.jpeg",
+    "static/media/1.jpeg": "/urflex-landing-page/static/media/1.5c5738eb47b45c98638d.jpeg",
+    "static/media/4.jpeg": "/urflex-landing-page/static/media/4.8be7838ef415b0e35ba5.jpeg",
+    "static/media/2.jpeg": "/urflex-landing-page/static/media/2.dc0e8f267940f3ec9cea.jpeg",
+    "static/media/8.jpeg": "/urflex-landing-page/static/media/8.7113868aa9ea0c67fab1.jpeg",
+    "static/media/6.jpeg": "/urflex-landing-page/static/media/6.63a497a97b60c147b4a5.jpeg",
+    "static/media/cards.png": "/urflex-landing-page/static/media/cards.a481ad68e8985656892c.png",
+    "static/media/7.jpeg": "/urflex-landing-page/static/media/7.42a864422748357e582f.jpeg",
+    "static/media/5.jpeg": "/urflex-landing-page/static/media/5.9909a251583a2ec9f7e6.jpeg",
+    "static/media/double_lines.png": "/urflex-landing-page/static/media/double_lines.783eec40dbec2b236093.png",
+    "static/media/plans.png": "/urflex-landing-page/static/media/plans.b02c2e093e6b7b80b07b.png",
+    "static/media/lines.png": "/urflex-landing-page/static/media/lines.f144ccd8f4376310ad82.png",
+    "static/media/9.jpeg": "/urflex-landing-page/static/media/9.8e5ecbd5a391a0a3f93d.jpeg",
+    "index.html": "/urflex-landing-page/index.html",
+    "main.4396f6e1.css.map": "/urflex-landing-page/static/css/main.4396f6e1.css.map",
+    "main.f7a6062f.js.map": "/urflex-landing-page/static/js/main.f7a6062f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4396f6e1.css",
+    "static/js/main.f7a6062f.js"
+  ]
+}
