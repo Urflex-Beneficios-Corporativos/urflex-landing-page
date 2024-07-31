@@ -16,4 +16,8 @@ export const TitleStyled = styled.h2`
     margin: 3%;
     font-size: 2.5rem;
     font-weight: 700;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
 `;

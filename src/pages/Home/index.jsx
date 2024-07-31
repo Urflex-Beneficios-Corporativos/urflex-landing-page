@@ -9,7 +9,7 @@ import Footer from "../../components/Footer";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
       <Presentation />
       <Benefits />
@@ -17,7 +17,7 @@ const Home = () => {
       <SecondSession />
       <FAQ />
       <Footer />
-    </div>
+    </>
   );
 };
 

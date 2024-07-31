@@ -36,8 +36,8 @@ export const HeroSection = styled.section`
 
 export const BackgroundImage = styled.div`
   position: absolute;
-  margin-top:50px;
   left: 0;
+  bottom: 50px;
   width: 100%;
   height: 100%;
   background-image: url(${linesImage});
@@ -55,17 +55,27 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   z-index: 2;
-  @media (min-width: 992px) {
-    flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 130px;
   }
 `;
 
 export const TextContent = styled.div`
   flex: 1;
   animation: ${fadeInLeft} 1s ease-out;
+
+  @media (min-width: 768px) {
+    text-align: left;
+    order: 1;
+  }
 `;
 
 export const Title = styled.h2`
@@ -73,10 +83,15 @@ export const Title = styled.h2`
   font-weight: bold;
   font-size: 44px;
   font-family: 'Roboto', sans-serif;
-  margin-top: 150px;
+  margin-top: 50px;
+
   @media (max-width: 768px) {
     font-size: 32px;
     margin-right: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 0;
   }
 `;
 
@@ -85,8 +100,10 @@ export const Description = styled.p`
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
+
   @media (max-width: 768px) {
     font-size: 18px;
+    margin-top: 20px;
   }
 `;
 
@@ -98,8 +115,20 @@ export const Image = styled.img`
   margin-left: 99px;
   transition: transform 0.5s ease, filter 0.5s ease;
   animation: ${fadeInRight} 1s ease-out;
+
   &:hover {
     transform: perspective(1000px) rotateY(-10deg) scale(1.3);
     filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.5));
+  }
+
+  @media (max-width: 768px) {
+    margin: 50px 0 0 0;
+    width: 300px;
+    transform: none !important;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+    order: 2;
   }
 `;

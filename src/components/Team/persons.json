@@ -1,0 +1,78 @@
+[
+    {
+      "category": "leadership",
+      "members": [
+        {
+          "id": 1,
+          "name": "Danilo Veloso",
+          "role": "CEO",
+          "description": "Graduando em <strong>Ciências Contábeis</strong> na UFC, é apaixonado por inovação e criação de novos negócios. Como <strong>CEO</strong> da Urflex, ele é responsável pela <strong>gestão</strong>, <strong>vendas</strong>, <strong>finanças</strong>, <strong>liderança</strong> e <strong>comunicação</strong> com parceiros."
+        },
+        {
+          "id": 2,
+          "name": "Gustavo Fernandes",
+          "role": "CTO",
+          "description": "Estudante de <strong>Ciência da Computação</strong> na UFC de Quixadá, é o <strong>CTO</strong> da Urflex Benefícios Corporativos. Como <strong>CTO</strong>, ele lidera o setor de tecnologia, tomando as melhores decisões e desenvolvendo soluções com sua equipe."
+        },
+        {
+          "id": 3,
+          "name": "Ray Teixeira",
+          "role": "CMO",
+          "description": "Graduando em <strong>Redes de Computadores</strong> e <strong>líder de comunidades de startups</strong>, atua como <strong>CMO</strong> da Urflex. É responsável pela <strong>coordenação geral</strong> das ações de <strong>marketing</strong> da empresa, visando a <strong>captação e fidelização de clientes</strong>, bem como a entrega de valor de marca para o mercado."
+        },
+        {
+          "id": 4,
+          "name": "Henrique Silva",
+          "role": "Orientador",
+          "description": "<strong>Professor Associado I</strong> e <strong>Coordenador</strong> do Curso de Graduação em <strong>Sistemas e Mídias Digitais</strong> na UFC, ministra disciplinas de informática na educação, gestão de projetos, gestão de negócios e empreendedorismo. Na Urflex, atua como <strong>Professor Orientador</strong> e <strong>Consultor</strong>."
+        }
+      ]
+    },
+    {
+      "category": "growth",
+      "members": [
+        {
+          "id": 5,
+          "name": "Fernanda Romão",
+          "role": "Analista de Marketing",
+          "description": "Estudante de <strong>Farmácia</strong> na UFC,  apaixonada por inovação. Como <strong>Analista de Marketing</strong> da Urflex, é responsável pela <strong>análise de indicadores</strong> da área de <strong>marketing</strong>, <strong>suporte</strong> em <strong>design</strong> de marca, <strong>gestão de redes sociais</strong> e demais atividades."
+        },
+        {
+          "id": 6,
+          "name": "Yasmin Emily",
+          "role": "Analista de Marketing",
+          "description": "Graduanda em <strong>Engenharia de Computação</strong> na UFC e apaixonada por tecnologia. Na Urflex, atua como <strong>desenvolvedora fullstack</strong> e <strong>Analista de Marketing</strong>. É responsável por ajudar nas demandas de <strong>Growth</strong>."
+        }
+      ]
+    },
+    {
+      "category": "tech",
+      "members": [
+        {
+          "id": 7,
+          "name": "Beatriz Fernandes",
+          "role": "Desenvolvedora de software",
+          "description": "Estudante de <strong>Engenharia de Software</strong> na UFC. Atua como <strong>desenvolvedora fullstack</strong> da Urflex, é responsável por auxiliar no desenvolvimento do sistema e demais necessidades da empresa."
+        },
+        {
+          "id": 8,
+          "name": "Cristiano Mendes",
+          "role": "Desenvolvedor de software",
+          "description": "Estudante de <strong>Engenharia de Software</strong> na UFC. Atua com <strong>desenvolvimento fullstack</strong>, garantindo uma experiência e usabilidade fácil e eficiente para os usuários e administradores dos sistemas."
+        },
+        {
+          "id": 9,
+          "name": "Marina Paula",
+          "role": "Designer e Desenvolvedora de software",
+          "description": "Estudante do 5º semestre de <strong>Engenharia de Computação</strong>. Entusiasta da tecnologia e apaixonada por filmes e livros em seu tempo livre, atua na Urflex como <strong>designer</strong> e <strong>desenvolvedora fullstack</strong>."
+        },
+        {
+          "id": 6,
+          "name": "Yasmin Gomes",
+          "role": "Analista de Marketing",
+          "description": "Graduanda em <strong>Engenharia de Computação</strong> na UFC e apaixonada por tecnologia. Na Urflex, atua como <strong>desenvolvedora fullstack</strong> e <strong>Analista de Marketing</strong>. É responsável por ajudar nas demandas de <strong>Growth</strong>."
+        }
+      ]
+    }
+  ]
+  

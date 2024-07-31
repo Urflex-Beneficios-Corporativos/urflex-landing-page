@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { List, X } from "@phosphor-icons/react";
 import { StyledHeader, Container, Logo, LogoImage, NavMenu, NavLink, MobileNavToggle, GetStartedButton } from './styles';
 
 const Header = () => {
@@ -9,7 +10,6 @@ const Header = () => {
 
   const toggleMobileNav = () => {
     setMobileNavActive(!isMobileNavActive);
-    document.body.classList.toggle('mobile-nav-active', !isMobileNavActive);
   };
 
   return (
@@ -18,27 +18,42 @@ const Header = () => {
         <Logo onClick={() => scroll.scrollToTop()}>
           <LogoImage src={logo} alt="Logo" />
         </Logo>
-        <NavMenu className={isMobileNavActive ? 'mobile-nav-active' : ''}>
+        <MobileNavToggle onClick={toggleMobileNav}>
+          {isMobileNavActive ? <X size={32} /> : <List size={32} />}
+        </MobileNavToggle>
+        <NavMenu isMobileNavActive={isMobileNavActive}>
           <ul>
-            <Link to="/" style={{textDecoration: 'none'}}>
               <li>
-                <NavLink>Home</NavLink>
+                <Link to="/" style={{ textDecoration: 'none' }}>
+                    <NavLink>
+                      Home
+                    </NavLink>
+                </Link>
               </li>
-            </Link>
-            <Link to="/about" style={{ textDecoration: 'none' }}> 
+            <li>
+              <Link to="/about" style={{ textDecoration: 'none' }}>
+                <NavLink>
+                  Sobre Nós
+                </NavLink>
+              </Link>
+            </li>
               <li>
-                <NavLink>Sobre Nós</NavLink>
+                <Link to="/team" style={{ textDecoration: 'none' }}>
+                  <NavLink>
+                    Nosso Time
+                  </NavLink>
+                </Link>
               </li>
-            </Link>
-            <Link to="/team" style={{ textDecoration: 'none' }}>
-              <li>
-                <NavLink>Nosso Time</NavLink>
-              </li>
-            </Link>
+                {/* <li>
+                  <NavLink>
+                    Obter E-book
+                  </NavLink>
+                </li> */}
           </ul>
         </NavMenu>
-        <MobileNavToggle onClick={toggleMobileNav} />
-        <GetStartedButton>Obter E-book</GetStartedButton>
+          {/* <GetStartedButton>
+            Obter E-book
+          </GetStartedButton> */}
       </Container>
     </StyledHeader>
   );

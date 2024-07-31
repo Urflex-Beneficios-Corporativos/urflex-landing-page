@@ -48,7 +48,7 @@ export const Title = styled.h2`
   text-align: left;
 
   @media (max-width: 768px) {
-    font-size: 32px;
+    font-size: 22px;
     text-align: center;
     
     .highlight {
@@ -64,7 +64,7 @@ export const Description = styled.p`
 
   @media (max-width: 768px) {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
 `;
 

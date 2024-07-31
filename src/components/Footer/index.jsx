@@ -22,13 +22,13 @@ function Footer() {
         <ButtonStyled type="submit">Enviar</ButtonStyled>
       </EmailContainerStyled>
       <SocialStyled>
-        <a href="mailto:urflex.app@gmail.com">
+        <a href="mailto:urflex.app@gmail.com" target='_blank'>
         < Envelope size={48} color='white' alt="E-mail"/>
         </a>
-        <a href="https://www.instagram.com/urflexbeneficios">
+        <a href="https://www.instagram.com/urflexbeneficios" target='_blank'>
           <InstagramLogo size={48} color='white' alt="Instagram"/>
         </a>
-        <a href="https://www.linkedin.com/company/urflex-beneficios-corporativos">
+        <a href="https://www.linkedin.com/company/urflex-beneficios-corporativos" target='_blank'>
           <LinkedinLogo size={48} color='white' alt="LinkedIn"/>
         </a>
       </SocialStyled>
