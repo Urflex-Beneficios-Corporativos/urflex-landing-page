@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import logo from '../../assets/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { List, X } from "@phosphor-icons/react";
 import { StyledHeader, Container, Logo, LogoImage, NavMenu, NavLink, MobileNavToggle, GetStartedButton } from './styles';
 
 const Header = () => {
   const [isMobileNavActive, setMobileNavActive] = useState(false);
+  const location = useLocation();
 
   const toggleMobileNav = () => {
     setMobileNavActive(!isMobileNavActive);
   };
+
+  const closeMobileNav = () => {
+    setMobileNavActive(false);
+  };
+
+  React.useEffect(() => {
+    closeMobileNav();
+  }, [location.pathname]);
 
   return (
     <StyledHeader>
@@ -25,21 +34,21 @@ const Header = () => {
           <ul>
               <li>
                 <Link to="/" style={{ textDecoration: 'none' }}>
-                    <NavLink>
+                    <NavLink style={{ color: location.pathname === '/' ? '#EB3E1B' : '#FDFEFE' }} onClick={closeMobileNav}>
                       Home
                     </NavLink>
                 </Link>
               </li>
             <li>
               <Link to="/about" style={{ textDecoration: 'none' }}>
-                <NavLink>
+                <NavLink style={{ color: location.pathname === '/about' ? '#EB3E1B' : '#FDFEFE' }} onClick={closeMobileNav}>
                   Sobre Nós
                 </NavLink>
               </Link>
             </li>
               <li>
                 <Link to="/team" style={{ textDecoration: 'none' }}>
-                  <NavLink>
+                  <NavLink style={{ color: location.pathname === '/team' ? '#EB3E1B' : '#FDFEFE' }} onClick={closeMobileNav}>
                     Nosso Time
                   </NavLink>
                 </Link>

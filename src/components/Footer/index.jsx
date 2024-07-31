@@ -18,6 +18,7 @@ function Footer() {
           name="email"
           id="email"
           placeholder="Insira seu melhor E-mail"
+          disabled
         />
         <ButtonStyled type="submit">Enviar</ButtonStyled>
       </EmailContainerStyled>

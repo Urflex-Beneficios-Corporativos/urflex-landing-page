@@ -125,7 +125,7 @@ export const MobileNavToggle = styled.div`
 `;
 
 export const GetStartedButton = styled.a`
-  background-color: #EB3E1B;
+  background-color: var(--primary-orange);
   color: #ffffff;
   cursor: pointer;
   padding: 8px 30px;
@@ -134,7 +134,7 @@ export const GetStartedButton = styled.a`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #d93b1b;
+    background-color: var(--primary-orange);
   }
     @media (max-width: 768px) {
       display: none;
