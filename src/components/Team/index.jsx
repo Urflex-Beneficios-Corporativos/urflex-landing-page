@@ -11,7 +11,7 @@ import BeatrizImg from '../../assets/6.jpeg'
 import CristianoImg from '../../assets/7.jpeg'
 import MarinaImg from '../../assets/9.jpeg'
 
-const imageMap = {/*Map referenciando uma imagem com um id*/
+const imageMap = {
     '1': DaniloImg,
     '2': GustavoImg,
     '3': RayImg,
@@ -35,18 +35,18 @@ function Team() {
     const [totalPersons, setTotalPersons] = useState(0);
     const teamContainer = useRef(null);
 
-    const categoryChange = (category) => {//troca a categoria selecionada entre (lideres, growth e tech )
+    const categoryChange = (category) => {
         setCurrentPersonIndex(0);
         setSelectedCategory(category);
     };
 
-    const personChange = (index) => {   //para mobile, seleciona um membro por id
+    const personChange = (index) => {
         if (index < 0 || index >= totalPersons) { return; }
         
         setCurrentPersonIndex(index);
     };
 
-    const calculateTranslateX = () => { //move o container de membros (X vezes a largura da tela)
+    const calculateTranslateX = () => {
         return -currentPersonIndex * 100;
     };
     useEffect(() => {
@@ -75,12 +75,6 @@ function Team() {
             className={currentPersonIndex === 0 ? 'hidden' : ''} onClick={() => personChange(currentPersonIndex - 1)} ></PrevButton>
         <NextButton
             className={currentPersonIndex >= totalPersons - 1 ? 'hidden' : ''} onClick={() => personChange(currentPersonIndex + 1)} ></NextButton>
-
-        {/*
-          Percorre os dados do json e para cada categoria adiciona um container, 
-          e para cada container adiciona seus respectivos membros.
-          Qualquer mudança nos membros deve ser feita no arquivo persons.json  
-        */}
         {persons.map(category => (
             <PersonContainer
                 key={category.category}

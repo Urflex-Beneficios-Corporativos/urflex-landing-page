@@ -11,6 +11,23 @@ export const Container = styled.div`
    margin-bottom: 100px;
 `;
 
+export const MainTitle = styled.h2`
+  font-size: 44px;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+`;
+
+export const MainParagraph = styled.p`
+  font-size: 22px;
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+`;
+
 export const ServiceItem = styled.div`
   text-align: center;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
@@ -29,7 +46,7 @@ export const ServiceItem = styled.div`
   }
 
   @media (max-width: 768px) {
-    text-align: left; /* Alinha o texto à esquerda em telas menores */
+    text-align: center;
   }
 `;
 
@@ -49,7 +66,7 @@ export const IconStyled = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-weight: 700;
+  font-weight: 768;
   display: flex;
   margin-left: -10px;
   font-size: 22px;
@@ -61,6 +78,13 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 840px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 116px;
+  }
 `;
 
 export const Description = styled.p`

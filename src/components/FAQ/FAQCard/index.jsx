@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { QuestionCardStyled, QuestionStyled, PlusStyled, AnswerStyled, AnswerTextStyled } from './styles';
+import { QuestionCardStyled, QuestionStyled, Question, PlusStyled, AnswerStyled, AnswerTextStyled } from './styles';
 
 function QuestionCard({ question, answer }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +11,7 @@ function QuestionCard({ question, answer }) {
   return (
     <QuestionCardStyled>
       <QuestionStyled onClick={toggleVisibility}>
-        <h4>{question}</h4>
+        <Question>{question}</Question>
         <PlusStyled className={isVisible ? 'turn' : ''}>+</PlusStyled>
       </QuestionStyled>
       <AnswerStyled className={isVisible ? 'show' : 'hidden'}>

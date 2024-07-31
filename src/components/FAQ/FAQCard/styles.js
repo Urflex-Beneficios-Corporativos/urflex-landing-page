@@ -11,7 +11,7 @@ export const QuestionCardStyled = styled.div`
     filter: contrast(1.02);
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     width: 90%;
     height: max-content;
   }
@@ -23,6 +23,16 @@ export const QuestionStyled = styled.div`
   align-items: center;
   padding: 25px;
   background-color: var(--default-color-darkgreen);
+`;
+
+export const Question = styled.h4`
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const AnswerStyled = styled.div`

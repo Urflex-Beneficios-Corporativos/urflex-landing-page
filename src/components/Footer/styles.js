@@ -15,6 +15,7 @@ export const ParagraphStyled = styled.p`
   color: #fff;
   margin-top: 10px;
   text-align: center;
+  width: 90%;
 `;
 
 export const EmailContainerStyled = styled.form`
