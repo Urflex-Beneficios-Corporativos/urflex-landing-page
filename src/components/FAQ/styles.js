@@ -9,15 +9,19 @@ export const FAQContainerStyled = styled.div`
     align-items: center;
     gap: 20px;
     height: max-content;
-    padding-bottom: 10%;
+    padding: 5% 0 10% 0;
+
+    @media (max-width: 768px) {
+        padding: 10% 0 20% 0;
+    }
 `;
 
 export const TitleStyled = styled.h2`
     margin: 3%;
-    font-size: 2.5rem;
+    font-size: 44px;
     font-weight: 700;
 
     @media (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 32px;
     }
 `;

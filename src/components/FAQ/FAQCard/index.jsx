@@ -15,7 +15,9 @@ function QuestionCard({ question, answer }) {
         <PlusStyled className={isVisible ? 'turn' : ''}>+</PlusStyled>
       </QuestionStyled>
       <AnswerStyled className={isVisible ? 'show' : 'hidden'}>
-        <AnswerTextStyled dangerouslySetInnerHTML={{ __html: answer }}></AnswerTextStyled>
+        {answer.map((paragraph, index) => (
+          <AnswerTextStyled key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
+        ))}
       </AnswerStyled>
     </QuestionCardStyled>
   );

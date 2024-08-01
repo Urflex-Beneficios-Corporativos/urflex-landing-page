@@ -29,6 +29,7 @@ export const Question = styled.h4`
   color: #fff;
   font-size: 1.5rem;
   font-weight: 400;
+  max-inline-size: 80%;
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
@@ -42,11 +43,12 @@ export const AnswerStyled = styled.div`
   max-height: 0px;
   transition: max-height 0.3s ease-in-out 0.1s;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: start;
 
   &.show {
-    max-height: 1000px;
+    max-height: 2000px;
   }
   
   & img{
@@ -57,11 +59,24 @@ export const AnswerStyled = styled.div`
   &.hidden {
     max-height: 0px;
   }
+
+  @media (max-width: 768px) {
+    & img{
+      padding: 0;
+    }
+  }
 `;
 
-export const AnswerTextStyled = styled.p`
-  overflow-y: auto;
+export const AnswerTextStyled = styled.div`
+  overflow-y: hidden;
   padding: 15px;
+
+  & p{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+  }
+
 `;
 
 export const PlusStyled = styled.div`
@@ -71,5 +86,12 @@ export const PlusStyled = styled.div`
 
   &.turn {
     transform: rotate(45deg) scale(3);
+  }
+  @media (max-width: 768px) {
+    transform: scale(2.5);
+    
+  &.turn {
+    transform: rotate(45deg) scale(2.5);
+  }
   }
 `;
